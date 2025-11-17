@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule - BRAVENxUNITED: Wings of Opportunity</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">
+                BRAVENxUNITED
+            </a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                <a href="index.html#overview" class="text-gray-700 hover:text-blue-600 transition-colors">Overview</a>
+                <a href="schedule.html" class="text-blue-600 font-semibold">Schedule</a>
+                <a href="activities.html" class="text-gray-700 hover:text-blue-600 transition-colors">Activities</a>
+                <a href="index.html#logistics" class="text-gray-700 hover:text-blue-600 transition-colors">Logistics</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600">Home</a>
+                <a href="index.html#overview" class="block text-gray-700 hover:text-blue-600">Overview</a>
+                <a href="schedule.html" class="block text-blue-600 font-semibold">Schedule</a>
+                <a href="activities.html" class="block text-gray-700 hover:text-blue-600">Activities</a>
+                <a href="index.html#logistics" class="block text-gray-700 hover:text-blue-600">Logistics</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-blue-600 via-blue-500 to-sky-400 text-white py-16 px-6">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Event Schedule</h1>
+            <p class="text-xl text-blue-100">A full day of aviation discovery and mentorship</p>
+        </div>
+    </section>
+
+    <!-- Schedule Timeline -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="space-y-8">
+                
+                <!-- 9:00 AM - Welcome -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <div class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-2">9:00 AM</div>
+                            <h2 class="text-3xl font-bold text-gray-800">Welcome + Icebreakers</h2>
+                        </div>
+                        <button onclick="openModal('modal-1')" class="mt-4 md:mt-0 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                            View Activities
+                        </button>
+                    </div>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li>• Meet pilot mentors of color</li>
+                        <li>• "My Aviation Story" presentations</li>
+                        <li>• Ask-a-Pilot mini Q&A</li>
+                    </ul>
+                </div>
+
+                <!-- 10:30 AM - Hands-On Flight -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <div class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold mb-2">10:30 AM</div>
+                            <h2 class="text-3xl font-bold text-gray-800">Hands-On Flight Experience</h2>
+                        </div>
+                        <button onclick="openModal('modal-2')" class="mt-4 md:mt-0 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                            View Activities
+                        </button>
+                    </div>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li>• Flight simulator station</li>
+                        <li>• Paper airplane challenge</li>
+                        <li>• Intro to aerodynamics</li>
+                    </ul>
+                </div>
+
+                <!-- 12:00 PM - Lunch -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <div class="inline-block bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold mb-2">12:00 PM</div>
+                            <h2 class="text-3xl font-bold text-gray-800">Lunch + Mentor Tables</h2>
+                        </div>
+                        <button onclick="openModal('modal-3')" class="mt-4 md:mt-0 bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                            View Activities
+                        </button>
+                    </div>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li>• Students rotate to meet different mentors</li>
+                        <li>• Informal Q&A sessions</li>
+                        <li>• Networking opportunities</li>
+                    </ul>
+                </div>
+
+                <!-- 1:00 PM - Behind the Scenes -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <div class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold mb-2">1:00 PM</div>
+                            <h2 class="text-3xl font-bold text-gray-800">Behind-the-Scenes Aviation</h2>
+                        </div>
+                        <button onclick="openModal('modal-4')" class="mt-4 md:mt-0 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                            View Activities
+                        </button>
+                    </div>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li>• Virtual or in-person airport operations tour</li>
+                        <li>• Air traffic control overview</li>
+                        <li>• Aircraft maintenance intro</li>
+                    </ul>
+                </div>
+
+                <!-- 2:15 PM - Career Pathways -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <div class="inline-block bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold mb-2">2:15 PM</div>
+                            <h2 class="text-3xl font-bold text-gray-800">Career Pathways + Build-an-Aircraft Activity</h2>
+                        </div>
+                        <button onclick="openModal('modal-5')" class="mt-4 md:mt-0 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                            View Activities
+                        </button>
+                    </div>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li>• Students map "How to Become a Pilot" steps</li>
+                        <li>• Mini STEM challenge: build a plane prototype</li>
+                        <li>• Career pathway exploration</li>
+                    </ul>
+                </div>
+
+                <!-- 3:00 PM - Celebration -->
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in hover-lift">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <div class="inline-block bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold mb-2">3:00 PM</div>
+                            <h2 class="text-3xl font-bold text-gray-800">Celebration + Certificates</h2>
+                        </div>
+                        <button onclick="openModal('modal-6')" class="mt-4 md:mt-0 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                            View Activities
+                        </button>
+                    </div>
+                    <ul class="text-gray-700 space-y-2 ml-4">
+                        <li>• Student reflections</li>
+                        <li>• Family invited</li>
+                        <li>• Take-home resource kit</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal 1: Welcome -->
+    <div id="modal-1" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800">9:00 AM – Welcome + Icebreakers</h3>
+                    <button onclick="closeModal('modal-1')" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Meet Pilot Mentors of Color</h4>
+                        <p>Students will be introduced to our diverse team of pilot mentors who will share their personal journeys and serve as role models throughout the day.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">"My Aviation Story" Presentations</h4>
+                        <p>Mentors will share their personal stories about how they discovered aviation, overcame challenges, and achieved their dreams. These presentations emphasize representation and relatability.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Ask-a-Pilot Mini Q&A</h4>
+                        <p>An interactive session where students can ask questions directly to pilots. This creates an open dialogue and helps students see pilots as approachable and relatable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Hands-On Flight -->
+    <div id="modal-2" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800">10:30 AM – Hands-On Flight Experience</h3>
+                    <button onclick="closeModal('modal-2')" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Flight Simulator Station</h4>
+                        <p>Students will have the opportunity to experience flying in a professional-grade flight simulator. Under mentor guidance, they'll learn basic controls and experience the thrill of piloting an aircraft.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Paper Airplane Challenge</h4>
+                        <p>A fun, hands-on activity where students design and test paper airplanes. This activity introduces basic aerodynamics principles in an accessible and engaging way.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Intro to Aerodynamics</h4>
+                        <p>An interactive lesson covering the basics of how airplanes fly, including lift, drag, thrust, and weight. Students will see these principles in action through demonstrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Lunch -->
+    <div id="modal-3" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800">12:00 PM – Lunch + Mentor Tables</h3>
+                    <button onclick="closeModal('modal-3')" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Rotating Mentor Tables</h4>
+                        <p>Students will rotate between different mentor tables during lunch, allowing them to meet multiple aviation professionals and hear diverse perspectives on careers in aviation.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Informal Q&A Sessions</h4>
+                        <p>Small group conversations where students can ask questions in a relaxed setting. This format encourages more personal connections and deeper conversations.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Networking Opportunities</h4>
+                        <p>Students will exchange contact information with mentors and learn about ongoing mentorship opportunities and resources available to them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Behind the Scenes -->
+    <div id="modal-4" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800">1:00 PM – Behind-the-Scenes Aviation</h3>
+                    <button onclick="closeModal('modal-4')" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Airport Operations Tour</h4>
+                        <p>Students will take a virtual or in-person tour of airport operations, seeing how airports function behind the scenes. This includes baggage handling, ground operations, and aircraft servicing.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Air Traffic Control Overview</h4>
+                        <p>An introduction to air traffic control, including how controllers manage aircraft in the sky and on the ground. Students will learn about this critical career path in aviation.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Aircraft Maintenance Intro</h4>
+                        <p>Students will learn about aircraft maintenance careers and see demonstrations of how aircraft are kept safe and operational. This highlights another important pathway in aviation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Career Pathways -->
+    <div id="modal-5" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800">2:15 PM – Career Pathways + Build-an-Aircraft</h3>
+                    <button onclick="closeModal('modal-5')" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">"How to Become a Pilot" Mapping</h4>
+                        <p>Students will work with mentors to map out the steps needed to become a pilot, including education requirements, training programs, certifications, and career progression. Each student will create their own personalized pathway.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Build-a-Plane STEM Challenge</h4>
+                        <p>A hands-on engineering activity where students work in teams to design and build a simple aircraft prototype using provided materials. This activity reinforces STEM concepts and teamwork.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Career Pathway Exploration</h4>
+                        <p>Students will explore various career paths in aviation beyond piloting, including aerospace engineering, air traffic control, aircraft maintenance, and aviation management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Celebration -->
+    <div id="modal-6" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-3xl font-bold text-gray-800">3:00 PM – Celebration + Certificates</h3>
+                    <button onclick="closeModal('modal-6')" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Student Reflections</h4>
+                        <p>Students will share their key takeaways and reflections from the day. This helps reinforce learning and allows students to hear from their peers about their experiences.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Family Invited</h4>
+                        <p>Families are invited to join for the closing celebration, allowing them to see what their students learned and meet the mentors. This helps build family support for continued exploration.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Take-Home Resource Kit</h4>
+                        <p>Each student receives a resource kit containing information about aviation careers, educational resources, scholarship opportunities, mentorship programs, and next steps for continued engagement.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Certificate of Participation</h4>
+                        <p>Students will receive a certificate recognizing their participation in the event, which they can add to their portfolios and share with schools and future programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6">
+        <div class="container mx-auto max-w-6xl text-center">
+            <p class="text-gray-300 mb-2">
+                Prototype only – created for BRAVENxUNITED.
+            </p>
+            <p class="text-gray-400 text-sm">
+                <a href="index.html" class="text-blue-400 hover:text-blue-300 transition-colors">Back to Home</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
