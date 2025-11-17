@@ -149,11 +149,6 @@ Then navigate to `http://localhost:8000` in your browser.
 - [ ] Analytics tracking
 - [ ] Multi-language support
 
-## 📄 License
-
-© 2025 BRAVENxUNITED Prototype
-
-This is a prototype created for demonstration purposes.
 
 ## 🤝 Contributing
 
@@ -161,10 +156,9 @@ This is a prototype project. For questions or suggestions, please contact the pr
 
 ## 📧 Contact
 
-For inquiries about the BRAVENxUNITED program:
-- Email: contact@bravenxunited.org
+
 - Repository: [https://github.com/NitaiMahat/BRAVENxUNITED](https://github.com/NitaiMahat/BRAVENxUNITED)
 
 ---
 
-**Built with ❤️ for BRAVENxUNITED**
+
