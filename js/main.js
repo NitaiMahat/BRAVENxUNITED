@@ -90,7 +90,7 @@ function initFormHandling() {
             
             // Simple validation feedback
             if (studentName && parentName && email && phone && grade) {
-                alert(`Thank you for your interest, ${studentName}!\n\nThis is a prototype form. Your information has not been saved.\n\nIn the production version, this would:\n- Send a confirmation email\n- Add you to the waitlist\n- Provide next steps for registration`);
+                alert(`Thank you for your interest, ${studentName}!\n\nThis is a prototype form. Your information has not been saved.\n\nIn the production version, after submitting this form, you would be asked to complete a questionnaire about your experience exploring the website. This helps us understand what you learned and how we can improve the program.\n\nAfter submission, this would:\n- Send a confirmation email\n- Add you to the waitlist\n- Provide next steps for registration`);
                 
                 // Optional: Reset form
                 // form.reset();

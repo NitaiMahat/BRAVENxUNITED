@@ -32,9 +32,14 @@ BravenPrototype/
 
 ### 🏠 Homepage (index.html)
 - **Hero Section**: Eye-catching gradient design with call-to-action
-- **Program Overview**: Problem/solution presentation with icon highlights
-- **Student Journey**: Simple 5-step experience timeline
-- **Logistics Section**: Event details and interest form
+- **Program Overview**: Explains the interactive website journey and questionnaire submission process
+- **Student Journey**: Activities and experiences students will have, including:
+  - Career Roadmap for Aviation
+  - Flight Simulator experience
+  - Budget Estimator & Simulation
+  - Meet United Pilots
+  - Complete journey with questionnaire
+- **Interest Form**: Form for students to express interest and complete questionnaire
 - **Mobile Responsive**: Fully optimized for all device sizes
 
 ### 📅 Schedule Page (schedule.html)
@@ -49,10 +54,10 @@ BravenPrototype/
   - Celebration + Certificates
 
 ### 🎮 Activities Page (activities.html)
-- **Paper Airplane Challenge**: Interactive game placeholder
-- **Build Your Aircraft**: Functional drag-and-drop aircraft builder with component validation
+- **Career Roadmap for Aviation**: Explore pathways to become a pilot, educational requirements, and career opportunities
+- **Budget Estimator & Simulation**: Interactive cost calculator showing pilot training expenses and a financial planning simulation game
 - **Flight Simulator**: Links to external flight simulator game
-- **Airport Tour**: Embedded YouTube video of pilot stories
+- **Meet United Pilots**: Connect with diverse United Airlines pilots sharing their unique journeys and experiences
 
 ### 🧪 Testing Page (testing.html)
 - **Stakeholder Feedback**: Collapsible sections for:
